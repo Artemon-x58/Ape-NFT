@@ -4,7 +4,7 @@ import { MainStyled, SectionStyled } from "./Main.styled";
 export const Main = () => {
   return (
     <MainStyled>
-      <SectionStyled>
+      <SectionStyled style={{ paddingLeft: "8px", paddingRight: "8px" }}>
         <Hero />
       </SectionStyled>
     </MainStyled>

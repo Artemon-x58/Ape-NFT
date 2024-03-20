@@ -1,12 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+  
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     
-/* background-color: #181818; */
+background-color: #181818;
 
     width: 100%;
     height: 100vh;

@@ -11,8 +11,8 @@ import MobileHeroImg from "../../img/mobile-hero.png";
 
 export const Hero = () => {
   return (
-    <Container>
-      <HeroWrapper>
+    <HeroWrapper>
+      <Container style={{ paddingLeft: "64px", paddingRight: "64px" }}>
         <HeroSubtitle>diD yOu seE iT?</HeroSubtitle>
         <HeroTitle>YACHT APES</HeroTitle>
         <HeroSubtitle>Apes aRe eveRywhere</HeroSubtitle>
@@ -22,7 +22,7 @@ export const Hero = () => {
           yacht ape is a collection of unique digital apes that you can own in
           nft format
         </HeroText>
-      </HeroWrapper>
-    </Container>
+      </Container>
+    </HeroWrapper>
   );
 };

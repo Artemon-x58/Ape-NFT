@@ -1,9 +1,17 @@
 import styled from "styled-components";
+import "../../../public/fonts/MessinaSans/stylesheet.css";
 
 export const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   padding-top: 54px;
+
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px; /* Задаем правый отступ */
+
+  /* Распределение элементов по краям родительского контейнера */
 `;
 
 export const Logo = styled.a``;
@@ -20,10 +28,18 @@ export const Menu = styled.button`
   border: none;
   background: transparent;
 
+  font-family: "Messina Sans Mono", sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 117%;
   color: #1e1e1e;
+
+  transition: color 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: #f0f0f0;
+  }
 `;
 
 export const SocialList = styled.ul`
@@ -37,7 +53,7 @@ export const SocialListWrapperItem = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  padding: 10px;
+  /* padding: 10px; */
   width: 48px;
   height: 48px;
 
@@ -52,6 +68,7 @@ export const SocialListLink = styled.a``;
 export const SocialSvg = styled.svg`
   width: 16px;
   height: 16px;
+  padding: 10px;
 
   fill: #1e1e1e;
 

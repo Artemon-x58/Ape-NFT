@@ -1,5 +1,6 @@
 import {
   HeaderStyled,
+  Logo,
   LogoSvg,
   LogoUse,
   Menu,
@@ -17,9 +18,12 @@ export const Header = () => {
   return (
     <Container>
       <HeaderStyled>
-        <LogoSvg>
-          <LogoUse href={`${Icons}#icon-logo`} />
-        </LogoSvg>
+        <Logo>
+          <LogoSvg>
+            <LogoUse href={`${Icons}#icon-logo`} />
+          </LogoSvg>
+        </Logo>
+
         <SocialList>
           <SocialListWrapperItem>
             <SocialListItem>
