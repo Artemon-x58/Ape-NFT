@@ -12,53 +12,58 @@ import {
   SocialUse,
 } from "./Header.styled";
 import Icons from "../../img/svg/icons.svg";
-import { Container } from "../Container/Container.styled";
+import { useState } from "react";
 
 export const Header = () => {
-  return (
-    <Container>
-      <HeaderStyled>
-        <Logo>
-          <LogoSvg>
-            <LogoUse href={`${Icons}#icon-logo`} />
-          </LogoSvg>
-        </Logo>
+  const [isActive, setIsActive] = useState(true);
 
-        <SocialList>
-          <SocialListWrapperItem>
-            <SocialListItem>
-              <Menu>MENU</Menu>
-            </SocialListItem>
-          </SocialListWrapperItem>
-          <SocialListWrapperItem>
-            <SocialListItem>
-              <SocialListLink href="https://discord.com/" target="_blank">
-                <SocialSvg>
-                  <SocialUse href={`${Icons}#icon-discord`} />
-                </SocialSvg>
-              </SocialListLink>
-            </SocialListItem>
-          </SocialListWrapperItem>
-          <SocialListWrapperItem>
-            <SocialListItem>
-              <SocialListLink href="https://logomark.com/" target="_blank">
-                <SocialSvg>
-                  <SocialUse href={`${Icons}#icon-logomark`} />
-                </SocialSvg>
-              </SocialListLink>
-            </SocialListItem>
-          </SocialListWrapperItem>
-          <SocialListWrapperItem>
-            <SocialListItem>
-              <SocialListLink href="https://twitter.com/" target="_blank">
-                <SocialSvg>
-                  <SocialUse href={`${Icons}#icon-X`} />
-                </SocialSvg>
-              </SocialListLink>
-            </SocialListItem>
-          </SocialListWrapperItem>
-        </SocialList>
-      </HeaderStyled>
-    </Container>
+  const handleMenuClick = () => {
+    setIsActive(!isActive);
+  };
+
+  return (
+    <HeaderStyled>
+      <Logo>
+        <LogoSvg $isActive={isActive}>
+          <LogoUse href={`${Icons}#icon-logo`} />
+        </LogoSvg>
+      </Logo>
+      <SocialList>
+        <SocialListWrapperItem $isActive={isActive}>
+          <SocialListItem>
+            <Menu onClick={handleMenuClick} $isActive={isActive}>
+              MENU
+            </Menu>
+          </SocialListItem>
+        </SocialListWrapperItem>
+        <SocialListWrapperItem $isActive={isActive}>
+          <SocialListItem>
+            <SocialListLink href="https://discord.com/" target="_blank">
+              <SocialSvg $isActive={isActive}>
+                <SocialUse href={`${Icons}#icon-discord`} />
+              </SocialSvg>
+            </SocialListLink>
+          </SocialListItem>
+        </SocialListWrapperItem>
+        <SocialListWrapperItem $isActive={isActive}>
+          <SocialListItem>
+            <SocialListLink href="https://logomark.com/" target="_blank">
+              <SocialSvg $isActive={isActive}>
+                <SocialUse href={`${Icons}#icon-logomark`} />
+              </SocialSvg>
+            </SocialListLink>
+          </SocialListItem>
+        </SocialListWrapperItem>
+        <SocialListWrapperItem $isActive={isActive}>
+          <SocialListItem>
+            <SocialListLink href="https://twitter.com/" target="_blank">
+              <SocialSvg $isActive={isActive}>
+                <SocialUse href={`${Icons}#icon-X`} />
+              </SocialSvg>
+            </SocialListLink>
+          </SocialListItem>
+        </SocialListWrapperItem>
+      </SocialList>
+    </HeaderStyled>
   );
 };
