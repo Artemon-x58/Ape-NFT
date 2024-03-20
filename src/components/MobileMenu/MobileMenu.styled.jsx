@@ -2,13 +2,26 @@ import styled from "styled-components";
 import "../../../public/fonts/MessinaSans/stylesheet.css";
 
 export const MobileMenuWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   padding-top: 130px;
   padding-bottom: 24px;
+  background-color: #181818;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(${(props) => (props.$isActive ? "0%" : "100%")});
+  visibility: ${(props) => (props.$isActive ? "visible" : "hidden")};
 `;
+
+export const NavWrapper = styled.div`
+  display: flex;
+  height: 75%;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
 export const MobileMenuList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -36,9 +49,6 @@ export const MobileMenuLink = styled.a`
 `;
 
 export const MobileMenuText = styled.p`
-  display: block;
-  margin-top: auto;
-
   font-family: "Messina Sans Mono", sans-serif;
   font-weight: 400;
   font-size: 12px;

@@ -12,15 +12,8 @@ import {
   SocialUse,
 } from "./Header.styled";
 import Icons from "../../img/svg/icons.svg";
-import { useState } from "react";
 
-export const Header = () => {
-  const [isActive, setIsActive] = useState(true);
-
-  const handleMenuClick = () => {
-    setIsActive(!isActive);
-  };
-
+export const Header = ({ handleMenuClick, isActive }) => {
   return (
     <HeaderStyled>
       <Logo>
@@ -32,7 +25,7 @@ export const Header = () => {
         <SocialListWrapperItem $isActive={isActive}>
           <SocialListItem>
             <Menu onClick={handleMenuClick} $isActive={isActive}>
-              MENU
+              {isActive ? "CLOSE" : "MENU"}
             </Menu>
           </SocialListItem>
         </SocialListWrapperItem>

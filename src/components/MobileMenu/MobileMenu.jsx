@@ -6,34 +6,37 @@ import {
   MobileMenuList,
   MobileMenuText,
   MobileMenuWrapper,
+  NavWrapper,
 } from "./MobileMenu.styled";
 
-export const MobileMenu = () => {
+export const MobileMenu = ({ handleMenuClick, isActive }) => {
   return (
-    <Container>
-      <Header />
-      <MobileMenuWrapper>
-        <MobileMenuList>
-          <MobileMenuItem>
-            <MobileMenuLink>ABOUT</MobileMenuLink>
-          </MobileMenuItem>
-          <MobileMenuItem>
-            <MobileMenuLink>MIND-MAP</MobileMenuLink>
-          </MobileMenuItem>
-          <MobileMenuItem>
-            <MobileMenuLink>FAQ</MobileMenuLink>
-          </MobileMenuItem>
-          <MobileMenuItem>
-            <MobileMenuLink>ARTS</MobileMenuLink>
-          </MobileMenuItem>
-          <MobileMenuItem>
-            <MobileMenuLink>MINT</MobileMenuLink>
-          </MobileMenuItem>
-        </MobileMenuList>
-        <MobileMenuText>
-          &copy; yacht ape 2024 all rights reserved
-        </MobileMenuText>
-      </MobileMenuWrapper>
-    </Container>
+    <MobileMenuWrapper $isActive={isActive}>
+      <Container style={{ height: "100%" }}>
+        <Header handleMenuClick={handleMenuClick} isActive={isActive} />
+        <NavWrapper>
+          <MobileMenuList>
+            <MobileMenuItem>
+              <MobileMenuLink>ABOUT</MobileMenuLink>
+            </MobileMenuItem>
+            <MobileMenuItem>
+              <MobileMenuLink>M-MAP</MobileMenuLink>
+            </MobileMenuItem>
+            <MobileMenuItem>
+              <MobileMenuLink>FAQ</MobileMenuLink>
+            </MobileMenuItem>
+            <MobileMenuItem>
+              <MobileMenuLink>ARTS</MobileMenuLink>
+            </MobileMenuItem>
+            <MobileMenuItem>
+              <MobileMenuLink>MINT</MobileMenuLink>
+            </MobileMenuItem>
+          </MobileMenuList>
+          <MobileMenuText>
+            &copy; yacht ape 2024 all rights reserved
+          </MobileMenuText>
+        </NavWrapper>
+      </Container>
+    </MobileMenuWrapper>
   );
 };
