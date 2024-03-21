@@ -12,6 +12,7 @@ import {
   SocialUse,
 } from "./Header.styled";
 import Icons from "../../img/svg/icons.svg";
+import PropTypes from "prop-types";
 
 export const Header = ({ handleMenuClick, isActive }) => {
   return (
@@ -59,4 +60,9 @@ export const Header = ({ handleMenuClick, isActive }) => {
       </SocialList>
     </HeaderStyled>
   );
+};
+
+Header.propTypes = {
+  handleMenuClick: PropTypes.func.isRequired,
+  isActive: PropTypes.bool.isRequired,
 };

@@ -14,7 +14,6 @@ export const App = () => {
     <>
       <Header handleMenuClick={handleMenuClick} isActive={isActive} />
       <Main />
-
       <MobileMenu handleMenuClick={handleMenuClick} isActive={isActive} />
     </>
   );

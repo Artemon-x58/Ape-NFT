@@ -39,6 +39,7 @@ background-color: #181818;
   }
 svg{
   cursor: pointer;
+  
 }
 label {
   cursor: pointer;
@@ -54,6 +55,10 @@ label {
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+span {
+  margin: 0;
 }
 
 

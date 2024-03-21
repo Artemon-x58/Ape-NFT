@@ -8,6 +8,7 @@ import {
   MobileMenuWrapper,
   NavWrapper,
 } from "./MobileMenu.styled";
+import PropTypes from "prop-types";
 
 export const MobileMenu = ({ handleMenuClick, isActive }) => {
   return (
@@ -39,4 +40,9 @@ export const MobileMenu = ({ handleMenuClick, isActive }) => {
       </Container>
     </MobileMenuWrapper>
   );
+};
+
+MobileMenu.propTypes = {
+  handleMenuClick: PropTypes.func.isRequired,
+  isActive: PropTypes.bool.isRequired,
 };
