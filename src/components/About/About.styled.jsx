@@ -63,6 +63,10 @@ export const AboutWrapperLine = styled.div`
   background-color: #dc3b5a;
 `;
 
+export const MarqueeWrapper = styled.div`
+  overflow: hidden;
+`;
+
 export const MarqueeText = styled.div`
   white-space: nowrap;
   animation: ${marqueeAnimation} 15s linear infinite;

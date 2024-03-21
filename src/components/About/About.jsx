@@ -10,6 +10,7 @@ import {
   AboutTitleSpan,
   AboutWrapperLine,
   MarqueeText,
+  MarqueeWrapper,
 } from "./About.styled";
 
 import Icons from "../../img/svg/icons.svg";
@@ -37,21 +38,23 @@ export const About = () => {
         <AboutImg src={MobileAboutImg} />
       </Container>
       <AboutWrapperLine>
-        <MarqueeText>
-          <AboutLinespan>
-            Destroy stereotypes
-            <AboutSvgLine>
-              <use href={`${Icons}#icon-cross`} />
-            </AboutSvgLine>
-          </AboutLinespan>
-          <AboutLinespan>
-            Have no limits
-            <AboutSvgLine>
-              <use href={`${Icons}#icon-cross`} />
-            </AboutSvgLine>
-          </AboutLinespan>
-          <AboutLinespan>Break rulles</AboutLinespan>
-        </MarqueeText>
+        <MarqueeWrapper>
+          <MarqueeText>
+            <AboutLinespan>
+              Destroy stereotypes
+              <AboutSvgLine>
+                <use href={`${Icons}#icon-cross`} />
+              </AboutSvgLine>
+            </AboutLinespan>
+            <AboutLinespan>
+              Have no limits
+              <AboutSvgLine>
+                <use href={`${Icons}#icon-cross`} />
+              </AboutSvgLine>
+            </AboutLinespan>
+            <AboutLinespan>Break rulles</AboutLinespan>
+          </MarqueeText>
+        </MarqueeWrapper>
       </AboutWrapperLine>
     </>
   );
