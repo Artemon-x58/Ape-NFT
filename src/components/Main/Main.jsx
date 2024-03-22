@@ -2,6 +2,7 @@ import { About } from "../About/About";
 import { FaqList } from "../FaqList/FaqList";
 import { Hero } from "../Hero/Hero";
 import { MindMap } from "../MindMap/MindMap";
+import { Mint } from "../Mint/Mint";
 import { MainStyled, SectionStyled } from "./Main.styled";
 
 export const Main = () => {
@@ -18,6 +19,9 @@ export const Main = () => {
       </SectionStyled>
       <SectionStyled>
         <FaqList />
+      </SectionStyled>
+      <SectionStyled>
+        <Mint />
       </SectionStyled>
     </MainStyled>
   );
