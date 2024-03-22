@@ -1,4 +1,5 @@
 import { About } from "../About/About";
+import { FaqList } from "../FaqList/FaqList";
 import { Hero } from "../Hero/Hero";
 import { MindMap } from "../MindMap/MindMap";
 import { MainStyled, SectionStyled } from "./Main.styled";
@@ -14,6 +15,9 @@ export const Main = () => {
       </SectionStyled>
       <SectionStyled>
         <MindMap />
+      </SectionStyled>
+      <SectionStyled>
+        <FaqList />
       </SectionStyled>
     </MainStyled>
   );
