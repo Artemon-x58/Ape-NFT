@@ -4,14 +4,14 @@ import { FaqList } from "../FaqList/FaqList";
 import { Hero } from "../Hero/Hero";
 import { MindMap } from "../MindMap/MindMap";
 import { Mint } from "../Mint/Mint";
-import { MainStyled, SectionStyled } from "./Main.styled";
+import { MainStyled, SectionHero, SectionStyled } from "./Main.styled";
 
 export const Main = () => {
   return (
     <MainStyled>
-      <SectionStyled style={{ paddingLeft: "8px", paddingRight: "8px" }}>
+      <SectionHero>
         <Hero />
-      </SectionStyled>
+      </SectionHero>
       <SectionStyled>
         <About />
       </SectionStyled>

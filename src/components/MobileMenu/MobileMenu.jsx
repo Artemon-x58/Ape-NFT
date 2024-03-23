@@ -9,6 +9,7 @@ import {
   MobileMenuWrapper,
   NavWrapper,
 } from "./MobileMenu.styled";
+import { handleMenuItemClick } from "../../js/scrollToSection";
 
 const sections = [
   { id: "about", label: "ABOUT" },
@@ -19,18 +20,6 @@ const sections = [
 ];
 
 export const MobileMenu = ({ handleMenuClick, isActive }) => {
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const handleMenuItemClick = (sectionId) => {
-    scrollToSection(sectionId);
-    handleMenuClick(false);
-  };
-
   return (
     <MobileMenuWrapper $isActive={isActive}>
       <Container style={{ height: "100%" }}>
@@ -39,7 +28,11 @@ export const MobileMenu = ({ handleMenuClick, isActive }) => {
           <MobileMenuList>
             {sections.map((section) => (
               <MobileMenuItem key={section.id}>
-                <MobileMenuLink onClick={() => handleMenuItemClick(section.id)}>
+                <MobileMenuLink
+                  onClick={() =>
+                    handleMenuItemClick(section.id, handleMenuClick)
+                  }
+                >
                   {section.label}
                 </MobileMenuLink>
               </MobileMenuItem>
