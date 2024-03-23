@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import "../../../public/fonts/MessinaSans/stylesheet.css";
+import { Container } from "../Container/Container.styled";
+
+export const MobileMenuContainer = styled(Container)`
+  height: 100%;
+`;
 
 export const MobileMenuWrapper = styled.div`
   position: fixed;
@@ -13,6 +18,10 @@ export const MobileMenuWrapper = styled.div`
   transition: transform 0.3s ease-in-out;
   transform: translateX(${(props) => (props.$isActive ? "0%" : "100%")});
   visibility: ${(props) => (props.$isActive ? "visible" : "hidden")};
+
+  @media screen and (min-width: 768px) {
+    background-color: transparent;
+  }
 `;
 
 export const NavWrapper = styled.div`
@@ -56,4 +65,8 @@ export const MobileMenuText = styled.p`
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;

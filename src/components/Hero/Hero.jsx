@@ -10,7 +10,7 @@ import {
   HeroWrapperLinkAndText,
 } from "./Hero.styled";
 import { handleMenuItemClick } from "../../js/scrollToSection";
-import { ContainerHero } from "../Header/Header.styled";
+import { ContainerHero } from "../Hero/Hero.styled";
 
 export const Hero = () => {
   return (

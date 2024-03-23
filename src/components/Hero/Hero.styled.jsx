@@ -1,10 +1,23 @@
 import styled from "styled-components";
+import { Container } from "../Container/Container.styled";
 import "../../../public/fonts/BiroScript/stylesheet.css";
 import "../../../public/fonts/MessinaSans/stylesheet.css";
 import "../../../public/fonts/Right Grotesk/stylesheet.css";
 import HeroMobile from "../../img/mobile-hero.png";
 import HeroTablet from "../../img/tablet-hero.png";
 import HeroDesktop from "../../img/desktop-hero.png";
+
+export const ContainerHero = styled(Container)`
+  @media screen and (min-width: 768px) {
+    padding-left: 73px;
+    padding-right: 72px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+`;
 
 export const HeroWrapper = styled.div`
   border-radius: 12px;
@@ -149,7 +162,7 @@ export const HeroText = styled.p`
 
   @media screen and (min-width: 768px) {
     width: 190px;
-    text-indent: 75px;
+    text-indent: 77px;
     text-align: justify;
   }
 `;

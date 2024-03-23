@@ -1,26 +1,20 @@
 import styled from "styled-components";
-import { Container } from "../Container/Container.styled";
-
-export const ContainerHero = styled(Container)`
-  @media screen and (min-width: 768px) {
-    padding-left: 73px;
-    padding-right: 72px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding-left: 120px;
-    padding-right: 120px;
-  }
-`;
 
 export const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   padding-top: 54px;
-  position: absolute;
+  position: fixed;
   top: 16px;
   left: 16px;
   right: 16px;
+  z-index: 10;
+
+  @media screen and (min-width: 768px) {
+    top: 20px;
+    left: 28px;
+    right: 28px;
+  }
 `;
 
 export const Logo = styled.a``;

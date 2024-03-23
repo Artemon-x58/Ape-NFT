@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { Container } from "../Container/Container.styled";
 import { Header } from "../Header/Header";
 import {
+  MobileMenuContainer,
   MobileMenuItem,
   MobileMenuLink,
   MobileMenuList,
@@ -22,8 +23,7 @@ const sections = [
 export const MobileMenu = ({ handleMenuClick, isActive }) => {
   return (
     <MobileMenuWrapper $isActive={isActive}>
-      <Container style={{ height: "100%" }}>
-        <Header handleMenuClick={handleMenuClick} isActive={isActive} />
+      <MobileMenuContainer>
         <NavWrapper>
           <MobileMenuList>
             {sections.map((section) => (
@@ -42,7 +42,7 @@ export const MobileMenu = ({ handleMenuClick, isActive }) => {
             &copy; yacht ape 2024 all rights reserved
           </MobileMenuText>
         </NavWrapper>
-      </Container>
+      </MobileMenuContainer>
     </MobileMenuWrapper>
   );
 };

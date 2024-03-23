@@ -3,10 +3,10 @@ import { FooterStyled, FooterText } from "./Footer.styled";
 
 export const Footer = () => {
   return (
-    <Container>
-      <FooterStyled>
+    <FooterStyled>
+      <Container>
         <FooterText>&copy; Yacht ape 2024 all rights reserved</FooterText>
-      </FooterStyled>
-    </Container>
+      </Container>
+    </FooterStyled>
   );
 };
