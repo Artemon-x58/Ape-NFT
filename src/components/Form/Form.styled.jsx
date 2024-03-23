@@ -31,7 +31,7 @@ export const FormSvg = styled.svg`
 `;
 
 export const FieldStyled = styled(Field)`
-  border: 1px solid #1e1e1e;
+  border: 1px solid ${(props) => (props.error ? "red" : "#1e1e1e")};
   border-radius: 0 8px 8px 0;
   padding: 16px 24px;
   width: calc(100% - 48px);
@@ -46,12 +46,12 @@ export const FieldStyled = styled(Field)`
 
   &:focus {
     border-color: white;
-    outline: none; /* Убираем стандартную обводку */
+    outline: none;
   }
 
   &.error {
-    border-color: red;
-    color: red;
+    border-color: #dc3b5a;
+    color: #dc3b5a;
   }
 `;
 
@@ -76,4 +76,22 @@ export const FormBtn = styled.button`
   line-height: 119%;
   text-transform: uppercase;
   color: #fff;
+`;
+
+export const CustomErrorMessage = styled.p`
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+
+  font-family: "Messina Sans Mono", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-align: right;
+  color: #dc3b5a;
+`;
+
+export const ErrorWrapper = styled.div`
+  position: relative;
 `;
