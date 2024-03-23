@@ -3,6 +3,8 @@ import "../../../public/fonts/MessinaSans/stylesheet.css";
 import "../../../public/fonts/Right Grotesk/stylesheet.css";
 
 export const MindMapTitle = styled.h2`
+  margin-bottom: 24px;
+
   font-family: "RightGrotesk", sans-serif;
   font-weight: 900;
   font-size: 44px;
@@ -12,18 +14,23 @@ export const MindMapTitle = styled.h2`
   color: #fff;
 `;
 
-export const MindMapSliderContainer = styled.div``;
-
 export const MindMapSliderItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 12px;
   padding: 24px 12px;
+  height: 194px;
 
   background: #1e1e1e;
 `;
 
-export const MindMapList = styled.ul``;
-
-export const MindMapItem = styled.li``;
+export const MindMapSliderLink = styled.a`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+`;
 
 export const MindMapSubtitle = styled.h3`
   font-family: "RightGrotesk", sans-serif;
@@ -43,4 +50,8 @@ export const MindMapText = styled.p`
   color: #fff;
 `;
 
-export const MindMapSvg = styled.svg``;
+export const MindMapSvg = styled.svg`
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+`;
