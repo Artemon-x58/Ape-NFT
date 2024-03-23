@@ -12,7 +12,7 @@ export const FaqList = () => {
 
   return (
     <Container>
-      <FaqTitle>Faq</FaqTitle>
+      <FaqTitle id="faq">Faq</FaqTitle>
       <FaqListStyled>
         <FaqItem
           number="[ 1 ]"

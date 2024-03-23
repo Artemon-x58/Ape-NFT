@@ -6,7 +6,7 @@ import { FormComponent } from "../Form/Form";
 export const Mint = () => {
   return (
     <Container>
-      <MintTitle>Are you in?</MintTitle>
+      <MintTitle id="mint">Are you in?</MintTitle>
       <MintSvg>
         <use href={`${Icons}#icon-cross`} />
       </MintSvg>

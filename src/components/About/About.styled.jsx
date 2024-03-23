@@ -14,11 +14,13 @@ export const AboutTitle = styled.h2`
   font-size: 40px;
   line-height: 100%;
   text-transform: uppercase;
+  text-align: left;
   color: #fff;
 `;
 
 export const AboutTitleSpan = styled.span`
   color: #dc3b5a;
+  text-align: left;
 `;
 
 export const AboutSubtitle = styled.p`

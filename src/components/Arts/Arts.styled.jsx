@@ -2,7 +2,7 @@ import styled from "styled-components";
 import "../../../public/fonts/Right Grotesk/stylesheet.css";
 import "../../../public/fonts/BiroScript/stylesheet.css";
 
-export const CollectionTitle = styled.h2`
+export const ArtsTitle = styled.h2`
   margin-bottom: 24px;
 
   font-family: "RightGrotesk", sans-serif;
@@ -13,7 +13,7 @@ export const CollectionTitle = styled.h2`
   color: #fff;
 `;
 
-export const CollectionSliderImg = styled.img`
+export const ArtsSliderImg = styled.img`
   border-radius: 12px;
 
   width: 100%;

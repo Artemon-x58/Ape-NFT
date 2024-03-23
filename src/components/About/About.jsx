@@ -20,9 +20,12 @@ export const About = () => {
   return (
     <>
       <Container>
-        <AboutTitle>
+        <AboutTitle id="about">
           a Story that started with
-          <AboutTitleSpan> one simple ape</AboutTitleSpan>
+          <AboutTitleSpan>
+            {" "}
+            one simple <br /> ape
+          </AboutTitleSpan>
         </AboutTitle>
         <AboutSubtitle>
           WHO GOT <br /> FED UP WITH BORING AND HYPOCRITIC COMMONPLACE THIS IS

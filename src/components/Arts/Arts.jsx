@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Container } from "../Container/Container.styled";
-import { CollectionSliderImg, CollectionTitle } from "./Collection.styled";
+import { ArtsSliderImg, ArtsTitle } from "./Arts.styled";
 import Images1 from "../../img/slider/slider-1.jpg";
 import Images2 from "../../img/slider/slider-2.jpg";
 import Images3 from "../../img/slider/slider-3.jpg";
@@ -19,52 +19,52 @@ import Images13 from "../../img/slider/slider-13.jpg";
 import Images14 from "../../img/slider/slider-14.jpg";
 import { SwiperBtns } from "../SwiperBtns/SwiperBtns";
 
-export const Collection = () => {
+export const Arts = () => {
   return (
     <Container>
-      <CollectionTitle>Collection</CollectionTitle>
+      <ArtsTitle id="arts">Collection</ArtsTitle>
       <Swiper spaceBetween={24} slidesPerView={1}>
         <SwiperSlide>
-          <CollectionSliderImg src={Images1} alt="Ape" />
+          <ArtsSliderImg src={Images1} alt="Ape" />
         </SwiperSlide>
         <SwiperSlide>
-          <CollectionSliderImg src={Images2} alt="Ape" />
+          <ArtsSliderImg src={Images2} alt="Ape" />
         </SwiperSlide>
         <SwiperSlide>
-          <CollectionSliderImg src={Images3} alt="Ape" />
+          <ArtsSliderImg src={Images3} alt="Ape" />
         </SwiperSlide>
         <SwiperSlide>
-          <CollectionSliderImg src={Images4} alt="Ape" />
+          <ArtsSliderImg src={Images4} alt="Ape" />
         </SwiperSlide>
         <SwiperSlide>
-          <CollectionSliderImg src={Images5} alt="Ape" />
+          <ArtsSliderImg src={Images5} alt="Ape" />
         </SwiperSlide>
         <SwiperSlide>
-          <CollectionSliderImg src={Images6} alt="Ape" />
+          <ArtsSliderImg src={Images6} alt="Ape" />
         </SwiperSlide>
         <SwiperSlide>
-          <CollectionSliderImg src={Images7} alt="Ape" />
+          <ArtsSliderImg src={Images7} alt="Ape" />
         </SwiperSlide>
         <SwiperSlide>
-          <CollectionSliderImg src={Images8} alt="Ape" />
+          <ArtsSliderImg src={Images8} alt="Ape" />
         </SwiperSlide>
         <SwiperSlide>
-          <CollectionSliderImg src={Images9} alt="Ape" />
+          <ArtsSliderImg src={Images9} alt="Ape" />
         </SwiperSlide>
         <SwiperSlide>
-          <CollectionSliderImg src={Images10} alt="Ape" />
+          <ArtsSliderImg src={Images10} alt="Ape" />
         </SwiperSlide>
         <SwiperSlide>
-          <CollectionSliderImg src={Images11} alt="Ape" />
+          <ArtsSliderImg src={Images11} alt="Ape" />
         </SwiperSlide>
         <SwiperSlide>
-          <CollectionSliderImg src={Images12} alt="Ape" />
+          <ArtsSliderImg src={Images12} alt="Ape" />
         </SwiperSlide>
         <SwiperSlide>
-          <CollectionSliderImg src={Images13} alt="Ape" />
+          <ArtsSliderImg src={Images13} alt="Ape" />
         </SwiperSlide>
         <SwiperSlide>
-          <CollectionSliderImg src={Images14} alt="Ape" />
+          <ArtsSliderImg src={Images14} alt="Ape" />
         </SwiperSlide>
         <SwiperBtns />
       </Swiper>

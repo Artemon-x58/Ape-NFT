@@ -16,7 +16,7 @@ import { SwiperBtns } from "../SwiperBtns/SwiperBtns";
 export const MindMap = () => {
   return (
     <Container>
-      <MindMapTitle>Mind map</MindMapTitle>
+      <MindMapTitle id="mind-map">Mind map</MindMapTitle>
       <Swiper spaceBetween={24} slidesPerView={1}>
         <SwiperSlide>
           <MindMapSliderItem>
