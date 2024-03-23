@@ -2,14 +2,12 @@ import {
   HeaderStyled,
   Logo,
   LogoSvg,
-  LogoUse,
   Menu,
   SocialList,
   SocialListItem,
   SocialListLink,
   SocialListWrapperItem,
   SocialSvg,
-  SocialUse,
 } from "./Header.styled";
 import Icons from "../../img/svg/icons.svg";
 import PropTypes from "prop-types";
@@ -17,9 +15,9 @@ import PropTypes from "prop-types";
 export const Header = ({ handleMenuClick, isActive }) => {
   return (
     <HeaderStyled>
-      <Logo>
-        <LogoSvg $isActive={isActive}>
-          <LogoUse href={`${Icons}#icon-logo`} />
+      <Logo href="../../../index.html">
+        <LogoSvg>
+          <use href={`${Icons}#icon-logo`} />
         </LogoSvg>
       </Logo>
       <SocialList>
@@ -34,7 +32,7 @@ export const Header = ({ handleMenuClick, isActive }) => {
           <SocialListItem>
             <SocialListLink href="https://discord.com/" target="_blank">
               <SocialSvg $isActive={isActive}>
-                <SocialUse href={`${Icons}#icon-discord`} />
+                <use href={`${Icons}#icon-discord`} />
               </SocialSvg>
             </SocialListLink>
           </SocialListItem>
@@ -43,7 +41,7 @@ export const Header = ({ handleMenuClick, isActive }) => {
           <SocialListItem>
             <SocialListLink href="https://logomark.com/" target="_blank">
               <SocialSvg $isActive={isActive}>
-                <SocialUse href={`${Icons}#icon-logomark`} />
+                <use href={`${Icons}#icon-logomark`} />
               </SocialSvg>
             </SocialListLink>
           </SocialListItem>
@@ -52,7 +50,7 @@ export const Header = ({ handleMenuClick, isActive }) => {
           <SocialListItem>
             <SocialListLink href="https://twitter.com/" target="_blank">
               <SocialSvg $isActive={isActive}>
-                <SocialUse href={`${Icons}#icon-X`} />
+                <use href={`${Icons}#icon-X`} />
               </SocialSvg>
             </SocialListLink>
           </SocialListItem>

@@ -21,7 +21,9 @@ export const Main = () => {
       <SectionStyled>
         <FaqList />
       </SectionStyled>
-      <Arts />
+      <SectionStyled>
+        <Arts />
+      </SectionStyled>
       <SectionStyled>
         <Mint />
       </SectionStyled>

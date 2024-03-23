@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
   
   body {
+    overflow: ${(props) => (props.isActive ? "hidden" : "auto")};
     margin: 0;
     padding: 0;
     /* font-family: 'Poppins', sans-serif; */

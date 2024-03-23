@@ -28,7 +28,7 @@ export const MobileMenu = ({ handleMenuClick, isActive }) => {
 
   const handleMenuItemClick = (sectionId) => {
     scrollToSection(sectionId);
-    handleMenuClick(false); // Закрываем мобильное меню
+    handleMenuClick(false);
   };
 
   return (

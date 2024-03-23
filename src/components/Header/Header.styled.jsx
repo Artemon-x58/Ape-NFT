@@ -24,8 +24,6 @@ export const LogoSvg = styled.svg`
   }
 `;
 
-export const LogoUse = styled.use``;
-
 export const SocialSvg = styled.svg`
   width: 16px;
   height: 16px;
@@ -77,5 +75,3 @@ export const SocialListWrapperItem = styled.div`
 export const SocialListItem = styled.li``;
 
 export const SocialListLink = styled.a``;
-
-export const SocialUse = styled.use``;

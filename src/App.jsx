@@ -9,6 +9,11 @@ export const App = () => {
 
   const handleMenuClick = () => {
     setIsActive(!isActive);
+    if (!isActive) {
+      return (document.body.style.overflow = "hidden");
+    } else {
+      document.body.style.overflow = "auto";
+    }
   };
 
   return (
