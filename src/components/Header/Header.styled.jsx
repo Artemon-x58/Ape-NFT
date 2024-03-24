@@ -4,7 +4,7 @@ export const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   padding-top: 54px;
-  position: absolute;
+  position: fixed;
   top: 16px;
   left: 16px;
   right: 16px;
@@ -16,6 +16,8 @@ export const HeaderStyled = styled.header`
     right: 28px;
   }
 `;
+
+export const HeaderWrapper = styled.div``;
 
 export const Logo = styled.a``;
 
@@ -29,6 +31,11 @@ export const LogoSvg = styled.svg`
   &:hover {
     fill: ${(props) => (props.$isActive ? "#DC3B5A" : "#fff")};
   }
+
+  @media screen and (min-width: 1280px) {
+    width: 72px;
+    height: 50px;
+  }
 `;
 
 export const SocialSvg = styled.svg`
@@ -41,6 +48,11 @@ export const SocialSvg = styled.svg`
   &:hover {
     fill: #fff;
     fill: ${(props) => (props.$isActive ? "#DC3B5A" : "#fff")};
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 24px;
+    height: 24px;
   }
 `;
 
@@ -59,6 +71,11 @@ export const Menu = styled.button`
     color: ${(props) => (props.$isActive ? "#DC3B5A" : "#f0f0f0")};
     text-decoration: underline;
   }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 119%;
+  }
 `;
 
 export const SocialList = styled.ul`
@@ -67,7 +84,7 @@ export const SocialList = styled.ul`
   gap: 8px;
 `;
 
-export const SocialListWrapperItem = styled.div`
+export const SocialListItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,8 +94,11 @@ export const SocialListWrapperItem = styled.div`
   backdrop-filter: blur(12px);
   background: ${(props) =>
     props.$isActive ? "rgba(255, 255, 255, 0.1)" : "rgba(30, 30, 30, 0.1)"};
-`;
 
-export const SocialListItem = styled.li``;
+  @media screen and (min-width: 1280px) {
+    width: 80px;
+    height: 80px;
+  }
+`;
 
 export const SocialListLink = styled.a``;
