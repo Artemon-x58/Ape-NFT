@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { Header } from "./components/Header/Header";
-import { Main } from "./components/Main/Main";
-import { MobileMenu } from "./components/MobileMenu/MobileMenu";
-import { Footer } from "./components/Footer/Footer";
+import { Header } from "./Header/Header";
+import { Main } from "./Main/Main";
+import { MobileMenu } from "./MobileMenu/MobileMenu";
+import { Footer } from "./Footer/Footer";
+import { GlobalStyles } from "./GlobalStyles/GlobalStyles";
 
-export const App = () => {
+const App = () => {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -21,6 +22,7 @@ export const App = () => {
 
   return (
     <>
+      <GlobalStyles />
       <Header handleMenuClick={handleMenuClick} isActive={isActive} />
       <Main />
       <Footer />
@@ -28,3 +30,5 @@ export const App = () => {
     </>
   );
 };
+
+export default App;
