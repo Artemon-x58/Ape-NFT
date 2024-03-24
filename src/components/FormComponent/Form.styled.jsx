@@ -23,6 +23,10 @@ export const FormIconWrapper = styled.div`
 
   backdrop-filter: blur(12px);
   background: #1e1e1e;
+
+  @media screen and (min-width: 1280px) {
+    padding: 20px;
+  }
 `;
 
 export const FormSvg = styled.svg`
@@ -53,6 +57,11 @@ export const FieldStyled = styled(Field)`
     border-color: #dc3b5a;
     color: #dc3b5a;
   }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 119%;
+  }
 `;
 
 export const FormBtn = styled.button`
@@ -82,6 +91,13 @@ export const FormBtn = styled.button`
     margin-left: auto;
     margin-right: auto;
   }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 397px;
+
+    font-size: 28px;
+    line-height: 121%;
+  }
 `;
 
 export const CustomErrorMessage = styled.p`
@@ -96,6 +112,13 @@ export const CustomErrorMessage = styled.p`
   text-transform: uppercase;
   text-align: right;
   color: #dc3b5a;
+
+  @media screen and (min-width: 1280px) {
+    bottom: -18px;
+
+    font-size: 12px;
+    line-height: 117%;
+  }
 `;
 
 export const ErrorWrapper = styled.div`
@@ -104,5 +127,9 @@ export const ErrorWrapper = styled.div`
 
   @media screen and (min-width: 768px) {
     width: 200px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 333px;
   }
 `;

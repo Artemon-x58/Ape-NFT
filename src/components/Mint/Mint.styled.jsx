@@ -19,6 +19,12 @@ export const MintTitle = styled.h2`
     font-size: 80px;
     line-height: 100%;
   }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 80px;
+
+    font-size: 160px;
+  }
 `;
 
 export const MintWrapperSvgText = styled.div`
@@ -26,6 +32,10 @@ export const MintWrapperSvgText = styled.div`
     width: 397px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 581px;
   }
 `;
 
@@ -55,5 +65,12 @@ export const MintText = styled.p`
 
   @media screen and (min-width: 768px) {
     margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 40px;
+
+    font-size: 24px;
+    line-height: 121%;
   }
 `;
