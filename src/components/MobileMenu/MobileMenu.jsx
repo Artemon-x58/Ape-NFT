@@ -23,6 +23,7 @@ const sections = [
 export const MobileMenu = ({ handleMenuClick, isActive }) => {
   return (
     <MobileMenuWrapper $isActive={isActive}>
+      <Header handleMenuClick={handleMenuClick} $isActive={isActive} />
       <MobileMenuContainer>
         <NavWrapper>
           <MobileMenuList>

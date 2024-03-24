@@ -4,11 +4,10 @@ export const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   padding-top: 54px;
-  position: fixed;
+  position: absolute;
   top: 16px;
   left: 16px;
   right: 16px;
-  z-index: 10;
 
   @media screen and (min-width: 768px) {
     top: 20px;

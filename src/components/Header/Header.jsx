@@ -59,5 +59,5 @@ export const Header = ({ handleMenuClick, isActive }) => {
 
 Header.propTypes = {
   handleMenuClick: PropTypes.func.isRequired,
-  isActive: PropTypes.bool.isRequired,
+  isActive: PropTypes.bool,
 };
