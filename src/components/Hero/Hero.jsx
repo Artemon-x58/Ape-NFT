@@ -9,7 +9,7 @@ import {
   HeroWrapper,
   HeroWrapperLinkAndText,
 } from "./Hero.styled";
-import { handleMenuItemClick } from "../../js/scrollToSection";
+import { handleMintSection } from "../../js/scrollToSection";
 import { ContainerHero } from "../Hero/Hero.styled";
 
 export const Hero = () => {
@@ -22,7 +22,7 @@ export const Hero = () => {
           <HeroSubtitleBottom>Apes aRe eveRywhere</HeroSubtitleBottom>
           <HeroImg />
           <HeroWrapperLinkAndText>
-            <HeroLink onClick={() => handleMenuItemClick("mint")}>
+            <HeroLink onClick={() => handleMintSection("mint")}>
               MEET APES
             </HeroLink>
             <HeroText>
