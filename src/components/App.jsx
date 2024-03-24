@@ -26,9 +26,11 @@ const App = () => {
       <Header handleMenuClick={handleMenuClick} isActive={isActive} />
       <Main />
       <Footer />
-      <MobileMenu handleMenuClick={handleMenuClick} isActive={isActive} />
     </>
   );
 };
 
 export default App;
+{
+  /* <MobileMenu handleMenuClick={handleMenuClick} isActive={isActive} /> */
+}

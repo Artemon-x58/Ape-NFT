@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { Header } from "../Header/Header";
 import {
   MobileMenuContainer,
   MobileMenuItem,
@@ -9,20 +8,11 @@ import {
   MobileMenuWrapper,
   NavWrapper,
 } from "./MobileMenu.styled";
-import { handleMenuItemClick } from "../../js/scrollToSection";
-
-const sections = [
-  { id: "about", label: "ABOUT" },
-  { id: "mind-map", label: "M-MAP" },
-  { id: "faq", label: "FAQ" },
-  { id: "arts", label: "ARTS" },
-  { id: "mint", label: "MINT" },
-];
+import { handleMenuItemClick, sections } from "../../js/scrollToSection";
 
 export const MobileMenu = ({ handleMenuClick, isActive }) => {
   return (
     <MobileMenuWrapper $isActive={isActive}>
-      <Header handleMenuClick={handleMenuClick} $isActive={isActive} />
       <MobileMenuContainer>
         <NavWrapper>
           <MobileMenuList>

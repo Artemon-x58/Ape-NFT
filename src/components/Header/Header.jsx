@@ -1,4 +1,9 @@
+import { useEffect, useState } from "react";
 import {
+  HeaderNavItem,
+  HeaderNavItemLink,
+  HeaderNavList,
+  HeaderNavWrapper,
   HeaderStyled,
   Logo,
   LogoSvg,
@@ -11,46 +16,111 @@ import {
 import { Container } from "../Container/Container.styled";
 import Icons from "../../img/svg/icons.svg";
 import PropTypes from "prop-types";
+import { handleMintSection } from "../../js/scrollToSection";
+import { useMediaQuery } from "../../js/mediaQuery.js";
 
-export const Header = ({ handleMenuClick, isActive }) => {
+export const Header = ({ isActive }) => {
+  const [deviceType, setDeviceType] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpenListNav, setIsOpenListNav] = useState(false);
+
+  const handleMenuClick = () => {
+    setIsOpenListNav(!isOpenListNav);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 450) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useMediaQuery(setDeviceType);
+
   return (
     <Container style={{ position: "relative", width: "100%" }}>
       <HeaderStyled>
-        <Logo href="../../../index.html">
+        <Logo href="../../../index.html" $isScrolled={isScrolled}>
           <LogoSvg $isActive={isActive}>
             <use href={`${Icons}#icon-logo`} />
           </LogoSvg>
         </Logo>
         <SocialList>
-          <SocialListItem $isActive={isActive}>
-            <Menu onClick={handleMenuClick} $isActive={isActive}>
-              {isActive ? "CLOSE" : "MENU"}
-            </Menu>
-          </SocialListItem>
+          <HeaderNavWrapper $deviceType={deviceType}>
+            <HeaderNavList
+              $deviceType={deviceType}
+              $isOpenListNav={isOpenListNav}
+            >
+              <HeaderNavItem>
+                <HeaderNavItemLink
+                  $isScrolled={isScrolled}
+                  onClick={() => handleMintSection("about")}
+                >
+                  About
+                </HeaderNavItemLink>
+              </HeaderNavItem>
+              <HeaderNavItem>
+                <HeaderNavItemLink
+                  $isScrolled={isScrolled}
+                  onClick={() => handleMintSection("mind-map")}
+                >
+                  M-Map
+                </HeaderNavItemLink>
+              </HeaderNavItem>
+              <HeaderNavItem>
+                <HeaderNavItemLink
+                  $isScrolled={isScrolled}
+                  onClick={() => handleMintSection("faq")}
+                >
+                  Faq
+                </HeaderNavItemLink>
+              </HeaderNavItem>
+              <HeaderNavItem>
+                <HeaderNavItemLink
+                  $isScrolled={isScrolled}
+                  onClick={() => handleMintSection("arts")}
+                >
+                  Arts
+                </HeaderNavItemLink>
+              </HeaderNavItem>
+              <HeaderNavItem>
+                <HeaderNavItemLink
+                  $isScrolled={isScrolled}
+                  onClick={() => handleMintSection("mint")}
+                >
+                  Mint
+                </HeaderNavItemLink>
+              </HeaderNavItem>
+            </HeaderNavList>
+            <SocialListItem $isActive={isActive}>
+              <Menu onClick={handleMenuClick} $isScrolled={isScrolled}>
+                {isOpenListNav ? "CLOSE" : "MENU"}
+              </Menu>
+            </SocialListItem>
+          </HeaderNavWrapper>
 
-          <SocialListItem $isActive={isActive}>
-            <SocialListLink href="https://discord.com/" target="_blank">
-              <SocialSvg $isActive={isActive}>
-                <use href={`${Icons}#icon-discord`} />
-              </SocialSvg>
-            </SocialListLink>
-          </SocialListItem>
-
-          <SocialListItem $isActive={isActive}>
-            <SocialListLink href="https://logomark.com/" target="_blank">
-              <SocialSvg $isActive={isActive}>
-                <use href={`${Icons}#icon-logomark`} />
-              </SocialSvg>
-            </SocialListLink>
-          </SocialListItem>
-
-          <SocialListItem $isActive={isActive}>
-            <SocialListLink href="https://twitter.com/" target="_blank">
-              <SocialSvg $isActive={isActive}>
-                <use href={`${Icons}#icon-X`} />
-              </SocialSvg>
-            </SocialListLink>
-          </SocialListItem>
+          {[
+            { href: "https://discord.com/", icon: "discord" },
+            { href: "https://logomark.com/", icon: "logomark" },
+            { href: "https://twitter.com/", icon: "X" },
+          ].map(({ href, icon }, index) => (
+            <SocialListItem key={index} $isActive={isActive}>
+              <SocialListLink href={href} target="_blank">
+                <SocialSvg $isActive={isActive} $isScrolled={isScrolled}>
+                  <use href={`${Icons}#icon-${icon}`} />
+                </SocialSvg>
+              </SocialListLink>
+            </SocialListItem>
+          ))}
         </SocialList>
       </HeaderStyled>
     </Container>
@@ -58,6 +128,5 @@ export const Header = ({ handleMenuClick, isActive }) => {
 };
 
 Header.propTypes = {
-  handleMenuClick: PropTypes.func.isRequired,
   isActive: PropTypes.bool,
 };

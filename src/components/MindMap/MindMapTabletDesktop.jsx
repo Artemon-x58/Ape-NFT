@@ -13,7 +13,7 @@ import Icons from "../../img/svg/icons.svg";
 export const MindMapTabletDesktop = () => {
   return (
     <Container>
-      <MindMapTitle>Mind map</MindMapTitle>
+      <MindMapTitle id="mind-map">Mind map</MindMapTitle>
       <MindMapList>
         <MindMapItem>
           <MindMapText>
