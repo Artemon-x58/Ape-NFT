@@ -12,9 +12,22 @@ export const MindMapTitle = styled.h2`
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+
+    font-size: 80px;
+    line-height: 100%;
+  }
 `;
 
-export const MindMapSliderItem = styled.div`
+export const MindMapList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // Две колонки в строке
+  grid-gap: 24px;
+`;
+
+export const MindMapItem = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,7 +38,7 @@ export const MindMapSliderItem = styled.div`
   background: #1e1e1e;
 `;
 
-export const MindMapSliderLink = styled.a`
+export const MindMapLink = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -48,10 +61,20 @@ export const MindMapText = styled.p`
   line-height: 117%;
   text-transform: uppercase;
   color: #fff;
+
+  @media screen and (min-width: 768px) {
+    width: 128px;
+    margin-left: auto;
+  }
 `;
 
 export const MindMapSvg = styled.svg`
   width: 24px;
   height: 24px;
   margin-left: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 48px;
+    height: 48px;
+  }
 `;
