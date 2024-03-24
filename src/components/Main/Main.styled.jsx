@@ -17,9 +17,13 @@ export const SectionStyled = styled.section`
 export const SectionHero = styled(SectionStyled)`
   padding-left: 8px;
   padding-right: 8px;
+  padding-top: 54px;
 
   @media screen and (min-width: 768px) {
     padding-left: 16px;
     padding-right: 16px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 16px;
   }
 `;

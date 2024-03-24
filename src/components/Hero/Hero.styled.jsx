@@ -35,6 +35,13 @@ export const HeroWrapper = styled.div`
     background-position: right 55% top 25px;
     background-repeat: no-repeat;
   }
+
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 111px;
+
+    background-image: url(${HeroDesktop});
+    background-position: right 50% top 25px;
+  }
 `;
 
 export const HeroTitle = styled.h1`
@@ -68,6 +75,21 @@ export const HeroTitle = styled.h1`
       top: -105px;
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 188px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: -215px;
+    }
+    &::after {
+      position: absolute;
+      right: 0;
+      top: -215px;
+    }
+  }
 `;
 
 export const HeroSubtitleTop = styled.p`
@@ -84,6 +106,13 @@ export const HeroSubtitleTop = styled.p`
     font-size: 20px;
     text-align: unset;
   }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 224px;
+
+    font-size: 24px;
+    line-height: 167%;
+  }
 `;
 
 export const HeroSubtitleBottom = styled(HeroSubtitleTop)`
@@ -96,6 +125,10 @@ export const HeroTextWrapper = styled.div`
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-left: 176px;
   }
 `;
 
@@ -147,7 +180,16 @@ export const HeroLink = styled.a`
   }
 
   @media screen and (min-width: 768px) {
-    width: 190px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 20px;
+
+    font-size: 28px;
+    line-height: 121%;
   }
 `;
 
@@ -164,5 +206,12 @@ export const HeroText = styled.p`
     width: 190px;
     text-indent: 77px;
     text-align: justify;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 337px;
+
+    font-size: 16px;
+    line-height: 119%;
   }
 `;
