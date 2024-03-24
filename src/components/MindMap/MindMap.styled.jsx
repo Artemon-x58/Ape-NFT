@@ -19,12 +19,23 @@ export const MindMapTitle = styled.h2`
     font-size: 80px;
     line-height: 100%;
   }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 80px;
+
+    font-size: 160px;
+  }
 `;
 
 export const MindMapList = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr); // Две колонки в строке
   grid-gap: 24px;
+
+  @media screen and (min-width: 1280px) {
+    grid-column-gap: 46px;
+    grid-row-gap: 48px;
+  }
 `;
 
 export const MindMapItem = styled.li`
@@ -36,6 +47,10 @@ export const MindMapItem = styled.li`
   height: 194px;
 
   background: #1e1e1e;
+
+  @media screen and (min-width: 1280px) {
+    height: 480px;
+  }
 `;
 
 export const MindMapLink = styled.a`
@@ -52,6 +67,10 @@ export const MindMapSubtitle = styled.h3`
   line-height: 100%;
   text-transform: uppercase;
   color: #fff;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 64px;
+  }
 `;
 
 export const MindMapText = styled.p`
@@ -66,6 +85,13 @@ export const MindMapText = styled.p`
     width: 128px;
     margin-left: auto;
   }
+
+  @media screen and (min-width: 1280px) {
+    width: 256px;
+
+    font-size: 24px;
+    line-height: 121%;
+  }
 `;
 
 export const MindMapSvg = styled.svg`
@@ -76,5 +102,10 @@ export const MindMapSvg = styled.svg`
   @media screen and (min-width: 768px) {
     width: 48px;
     height: 48px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 64px;
+    height: 64px;
   }
 `;
