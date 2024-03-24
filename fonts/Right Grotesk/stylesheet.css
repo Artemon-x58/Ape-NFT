@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "RightGrotesk";
+  src: url("RightGrotesk-CompactBlack.otf");
+  src: url("RightGrotesk-CompactBlack.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
