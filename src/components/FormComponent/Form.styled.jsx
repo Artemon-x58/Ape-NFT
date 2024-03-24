@@ -76,6 +76,12 @@ export const FormBtn = styled.button`
   line-height: 119%;
   text-transform: uppercase;
   color: #fff;
+
+  @media screen and (min-width: 768px) {
+    max-width: 248px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const CustomErrorMessage = styled.p`
@@ -94,4 +100,9 @@ export const CustomErrorMessage = styled.p`
 
 export const ErrorWrapper = styled.div`
   position: relative;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 200px;
+  }
 `;

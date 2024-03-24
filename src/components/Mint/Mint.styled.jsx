@@ -12,6 +12,21 @@ export const MintTitle = styled.h2`
   text-transform: uppercase;
   color: #fff;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+
+    font-size: 80px;
+    line-height: 100%;
+  }
+`;
+
+export const MintWrapperSvgText = styled.div`
+  @media screen and (min-width: 768px) {
+    width: 397px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const MintSvg = styled.svg`
@@ -21,6 +36,10 @@ export const MintSvg = styled.svg`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 24px;
+  }
 `;
 
 export const MintText = styled.p`
@@ -33,4 +52,8 @@ export const MintText = styled.p`
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 24px;
+  }
 `;
