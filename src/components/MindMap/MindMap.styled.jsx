@@ -48,6 +48,11 @@ export const MindMapItem = styled.li`
 
   background: #1e1e1e;
 
+  @media screen and (min-width: 768px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   @media screen and (min-width: 1280px) {
     height: 480px;
   }

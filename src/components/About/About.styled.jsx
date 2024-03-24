@@ -31,8 +31,8 @@ export const AboutMainWrapper = styled.div`
     padding-bottom: 82px;
 
     background-image: url(${AboutDesktopImg});
-    background-position: top 180px left 510px;
-    background-size: 550px 830px;
+    background-position: top 180px left 550px;
+    background-size: 630px 830px;
   }
 `;
 

@@ -14,6 +14,10 @@ export const FaqListItemStyled = styled.li`
   @media screen and (min-width: 768px) {
     padding: 18px 16px 23px 237px;
   }
+
+  @media screen and (min-width: 1280px) {
+    padding: 24px 24px 24px 466px;
+  }
 `;
 
 export const FaqListItemTitle = styled.h3`
@@ -39,6 +43,10 @@ export const FaqListItemTitle = styled.h3`
     font-size: 32px;
   }
 
+  @media screen and (min-width: 1280px) {
+    font-size: 64px;
+  }
+
   &::before {
     content: "${(props) => props.$number}";
     position: absolute;
@@ -53,9 +61,18 @@ export const FaqListItemTitle = styled.h3`
 
     @media screen and (min-width: 768px) {
       left: -53px;
+      top: 2px;
 
       font-size: 16px;
       line-height: 169%;
+    }
+
+    @media screen and (min-width: 1280px) {
+      left: -95px;
+      top: 7px;
+
+      font-size: 24px;
+      line-height: 167%;
     }
   }
 `;
@@ -73,6 +90,13 @@ export const FaqListItemText = styled.p`
   @media screen and (min-width: 768px) {
     margin-top: 12px;
   }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 36px;
+
+    font-size: 16px;
+    line-height: 119%;
+  }
 `;
 
 export const FaqImg = styled.img`
@@ -88,5 +112,12 @@ export const FaqImg = styled.img`
     left: 19px;
 
     display: ${(props) => (props.$isOpen ? "unset" : "none")};
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 248px;
+    height: 306px;
+    top: -30px;
+    left: 85px;
   }
 `;

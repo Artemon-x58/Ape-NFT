@@ -18,10 +18,20 @@ export const FaqTitle = styled.h2`
     font-size: 80px;
     line-height: 100%;
   }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 80px;
+
+    font-size: 160px;
+  }
 `;
 
 export const FaqListStyled = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media screen and (min-width: 1280px) {
+    gap: 48px;
+  }
 `;
