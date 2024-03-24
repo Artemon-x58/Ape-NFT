@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { Container } from "../Container/Container.styled";
 import { Header } from "../Header/Header";
 import {
   MobileMenuContainer,
