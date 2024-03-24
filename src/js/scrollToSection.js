@@ -7,5 +7,7 @@ const scrollToSection = (sectionId) => {
 
 export const handleMenuItemClick = (sectionId, handleMenuClick) => {
   scrollToSection(sectionId);
-  handleMenuClick(false);
+  if (handleMenuClick !== undefined) {
+    handleMenuClick(false);
+  }
 };
