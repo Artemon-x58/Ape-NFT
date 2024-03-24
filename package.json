@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Artemon-x58.github.io/Ape-NFT/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
