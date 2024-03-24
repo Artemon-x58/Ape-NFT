@@ -10,7 +10,13 @@ export const ArtsTitle = styled.h2`
   font-size: 44px;
   line-height: 91%;
   text-transform: uppercase;
+  text-align: center;
   color: #fff;
+
+  @media screen and (min-width: 768px) {
+    font-size: 80px;
+    line-height: 100%;
+  }
 `;
 
 export const ArtsSliderImg = styled.img`

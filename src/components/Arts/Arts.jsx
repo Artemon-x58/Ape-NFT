@@ -18,12 +18,28 @@ import Images12 from "../../img/slider/slider-12.jpg";
 import Images13 from "../../img/slider/slider-13.jpg";
 import Images14 from "../../img/slider/slider-14.jpg";
 import { SwiperBtns } from "../SwiperBtns/SwiperBtns";
+import { useEffect, useState } from "react";
+import { useMediaQuery } from "../../js/mediaQuery";
 
 export const Arts = () => {
+  const [slidesPerView, setSlidesPerView] = useState(1);
+  const [deviceType, setDeviceType] = useState("");
+
+  useMediaQuery(setDeviceType);
+
+  useEffect(() => {
+    if (deviceType === "mobile") {
+      setSlidesPerView(1);
+    } else if (deviceType === "tablet") {
+      setSlidesPerView(2);
+    } else if (deviceType === "desktop") {
+      setSlidesPerView(4);
+    }
+  }, [deviceType]);
   return (
     <Container>
       <ArtsTitle id="arts">Collection</ArtsTitle>
-      <Swiper spaceBetween={24} slidesPerView={1}>
+      <Swiper spaceBetween={24} slidesPerView={slidesPerView}>
         <SwiperSlide>
           <ArtsSliderImg src={Images1} alt="Ape" />
         </SwiperSlide>

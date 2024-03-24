@@ -18,7 +18,7 @@ export const SwiperBtnsStyled = styled.button`
   font-family: "Biro Script Plus Bold US", sans-serif;
   font-weight: 400;
   font-size: 24px;
-  line-height: 100%;
+  line-height: 125%;
   color: #fff;
 
   &:hover,
