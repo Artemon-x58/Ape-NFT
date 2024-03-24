@@ -14,8 +14,16 @@ export const ArtsTitle = styled.h2`
   color: #fff;
 
   @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+
     font-size: 80px;
     line-height: 100%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 80px;
+
+    font-size: 160px;
   }
 `;
 

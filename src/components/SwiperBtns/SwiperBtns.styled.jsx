@@ -8,6 +8,10 @@ export const SwiperBtnsWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 24px;
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 48px;
+  }
 `;
 
 export const SwiperBtnsStyled = styled.button`
