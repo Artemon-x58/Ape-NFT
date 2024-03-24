@@ -6,7 +6,7 @@ import AboutTabletImg from "../../img/about-tablet.png";
 import AboutDesktopImg from "../../img/about-desktop.png";
 
 const marqueeAnimation = keyframes`
-  0% { transform: translateX(50%); }
+  0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 `;
 
@@ -22,6 +22,17 @@ export const AboutMainWrapper = styled.div`
     background-position: top 120px left 280px;
     background-size: 313px 427px;
     background-repeat: no-repeat;
+  }
+
+  @media screen and (min-width: 1280px) {
+    column-gap: 0;
+    row-gap: 149px;
+    justify-content: space-between;
+    padding-bottom: 82px;
+
+    background-image: url(${AboutDesktopImg});
+    background-position: top 180px left 510px;
+    background-size: 550px 830px;
   }
 `;
 
@@ -45,6 +56,12 @@ export const AboutTitle = styled.h2`
     .about-title-mobile {
       display: none;
     }
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 538px;
+
+    font-size: 120px;
   }
 `;
 
@@ -80,11 +97,21 @@ export const AboutSubtitle = styled.p`
       display: none;
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    width: 409px;
+
+    font-size: 24px;
+    line-height: 121%;
+  }
 `;
 
 export const AboutWarapperSvgText = styled.div`
   @media screen and (min-width: 768px) {
     width: 269px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 409px;
   }
 `;
 
@@ -100,6 +127,11 @@ export const AboutSvg = styled.svg`
   @media screen and (min-width: 768px) {
     margin-bottom: 24px;
   }
+
+  @media screen and (min-width: 1280px) {
+    width: 36px;
+    height: 36px;
+  }
 `;
 
 export const AboutText = styled.p`
@@ -114,10 +146,14 @@ export const AboutText = styled.p`
   color: #fff;
 
   @media screen and (min-width: 768px) {
-    width: 269px;
     margin-bottom: 0;
 
     font-size: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;
+    line-height: 121%;
   }
 `;
 
@@ -142,6 +178,10 @@ export const AboutWrapperLine = styled.div`
   align-items: center;
 
   background-color: #dc3b5a;
+
+  @media screen and (min-width: 1280px) {
+    height: 86px;
+  }
 `;
 
 export const MarqueeWrapper = styled.div`
@@ -159,7 +199,13 @@ export const AboutSvgLine = styled.svg`
   height: 36px;
   margin-left: 24px;
   margin-right: 24px;
-  vertical-align: top;
+  vertical-align: -5px;
+
+  @media screen and (min-width: 1280px) {
+    margin-left: 36px;
+    margin-right: 36px;
+    vertical-align: 5px;
+  }
 `;
 
 export const AboutLinespan = styled.span`
@@ -169,4 +215,8 @@ export const AboutLinespan = styled.span`
   line-height: 100%;
   text-transform: uppercase;
   color: #fff;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 64px;
+  }
 `;
