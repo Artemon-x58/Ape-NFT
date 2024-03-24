@@ -4,11 +4,16 @@ import "../../../public/fonts/MessinaSans/stylesheet.css";
 import "../../../public/fonts/Right Grotesk/stylesheet.css";
 
 export const FaqListItemStyled = styled.li`
+  position: relative;
+
   padding: 8px 8px 8px 39px;
   border-radius: 12px;
-  background-color: ${(props) => (props.$isOpen ? "#1e1e1e" : "none")};
-
+  background-color: ${(props) => (props.$isOpen ? "#1e1e1e" : "unset")};
   cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    padding: 18px 16px 23px 237px;
+  }
 `;
 
 export const FaqListItemTitle = styled.h3`
@@ -22,11 +27,22 @@ export const FaqListItemTitle = styled.h3`
   text-transform: uppercase;
   color: ${(props) => (props.$isOpen ? "#dc3b5a" : "#fff")};
 
+  &:hover {
+    color: #dc3b5a;
+
+    &::before {
+      color: #fff;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
+
   &::before {
     content: "${(props) => props.$number}";
     position: absolute;
     left: -30px;
-
     transition: color 250ms linear;
 
     font-family: "Biro Script Plus Bold US", sans-serif;
@@ -34,11 +50,12 @@ export const FaqListItemTitle = styled.h3`
     font-size: 12px;
     line-height: 167%;
     color: ${(props) => (props.$isOpen ? "#fff" : "#dc3b5a")};
-  }
-  &:hover {
-    color: #dc3b5a;
-    &::before {
-      color: #fff;
+
+    @media screen and (min-width: 768px) {
+      left: -53px;
+
+      font-size: 16px;
+      line-height: 169%;
     }
   }
 `;
@@ -52,4 +69,24 @@ export const FaqListItemText = styled.p`
   line-height: 117%;
   text-transform: uppercase;
   color: #fff;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 12px;
+  }
+`;
+
+export const FaqImg = styled.img`
+  display: none;
+  border-radius: 16px;
+  width: 148px;
+  height: 183px;
+  transform: rotate(-16deg);
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: -12px;
+    left: 19px;
+
+    display: ${(props) => (props.$isOpen ? "unset" : "none")};
+  }
 `;

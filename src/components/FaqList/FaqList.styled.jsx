@@ -11,6 +11,13 @@ export const FaqTitle = styled.h2`
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 48px;
+
+    font-size: 80px;
+    line-height: 100%;
+  }
 `;
 
 export const FaqListStyled = styled.ul`
