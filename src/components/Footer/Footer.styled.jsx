@@ -9,6 +9,11 @@ export const FooterStyled = styled.footer`
     padding-top: 80px;
     padding-bottom: 40px;
   }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 120px;
+    padding-bottom: 42px;
+  }
 `;
 
 export const FooterText = styled.p`
@@ -19,4 +24,13 @@ export const FooterText = styled.p`
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+
+  @media screen and (min-width: 1280px) {
+    width: 363px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 16px;
+    line-height: 119%;
+  }
 `;
