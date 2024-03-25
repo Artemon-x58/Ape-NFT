@@ -8,6 +8,7 @@ import {
   MobileMenuLink,
   MobileMenuList,
   MobileMenuListBtns,
+  MobileMenuListIcons,
   MobileMenuLogo,
   MobileMenuSvg,
   MobileMenuText,
@@ -23,11 +24,6 @@ export const MobileMenu = ({ handleMenuClick, isActive }) => {
     <MobileMenuWrapper $isActive={isActive}>
       <MobileMenuContainer>
         <NavWrapper>
-          <MobileMenuLogo onClick={() => location.reload()}>
-            <MobileMenuSvg>
-              <use href={`${Icons}#icon-logo`} />
-            </MobileMenuSvg>
-          </MobileMenuLogo>
           <MobileMenuList>
             {sections.map((section) => (
               <MobileMenuItem key={section.id}>
@@ -42,20 +38,28 @@ export const MobileMenu = ({ handleMenuClick, isActive }) => {
             ))}
           </MobileMenuList>
           <MobileMenuListBtns>
-            <MobileMenuItemBtns>
-              <MobileMenuBtn onClick={() => handleMenuClick()}>
-                Close
-              </MobileMenuBtn>
-            </MobileMenuItemBtns>
-            {socialLinks.map(({ href, icon }, index) => (
-              <MobileMenuItemBtns key={index}>
-                <MobileMenuBtn href={href} target="_blank">
-                  <MobileMenuBtnSvg>
-                    <use href={`${Icons}#icon-${icon}`} />
-                  </MobileMenuBtnSvg>
+            <MobileMenuLogo href="/index.html">
+              <MobileMenuSvg>
+                <use href={`${Icons}#icon-logo`} />
+              </MobileMenuSvg>
+            </MobileMenuLogo>
+            <MobileMenuListIcons>
+              <MobileMenuItemBtns>
+                <MobileMenuBtn onClick={() => handleMenuClick()}>
+                  Close
                 </MobileMenuBtn>
               </MobileMenuItemBtns>
-            ))}
+
+              {socialLinks.map(({ href, icon }, index) => (
+                <MobileMenuItemBtns key={index}>
+                  <MobileMenuBtn href={href} target="_blank">
+                    <MobileMenuBtnSvg>
+                      <use href={`${Icons}#icon-${icon}`} />
+                    </MobileMenuBtnSvg>
+                  </MobileMenuBtn>
+                </MobileMenuItemBtns>
+              ))}
+            </MobileMenuListIcons>
           </MobileMenuListBtns>
           <MobileMenuText>
             &copy; yacht ape 2024 all rights reserved

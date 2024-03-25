@@ -25,6 +25,7 @@ export const MobileMenuWrapper = styled.div`
 `;
 
 export const NavWrapper = styled.div`
+  position: relative;
   display: flex;
   height: 75%;
   flex-direction: column;
@@ -68,10 +69,7 @@ export const MobileMenuText = styled.p`
   }
 `;
 
-export const MobileMenuLogo = styled.a`
-  position: absolute;
-  top: 70px;
-`;
+export const MobileMenuLogo = styled.a``;
 
 export const MobileMenuSvg = styled.svg`
   width: 48px;
@@ -79,13 +77,20 @@ export const MobileMenuSvg = styled.svg`
   fill: #fff;
 `;
 
-export const MobileMenuListBtns = styled.ul`
-  position: absolute;
-  top: 70px;
-  right: 50px;
+export const MobileMenuListIcons = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 8px;
+`;
+
+export const MobileMenuListBtns = styled.ul`
+  position: absolute;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  top: -68px;
+  right: -56px;
+  left: -56px;
   gap: 8px;
 `;
 
