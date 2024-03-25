@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import "../../../public/fonts/MessinaSans/stylesheet.css";
+
 import { Container } from "../Container/Container.styled";
 
 export const MobileMenuContainer = styled(Container)`
@@ -60,9 +60,6 @@ export const MobileMenuLink = styled.a`
 export const MobileMenuText = styled.p`
   font-family: "Messina Sans Mono", sans-serif;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 117%;
-  text-transform: uppercase;
   text-align: center;
   color: #fff;
 
@@ -108,9 +105,7 @@ export const MobileMenuItemBtns = styled.li`
 export const MobileMenuBtn = styled.a`
   font-family: "Messina Sans Mono", sans-serif;
   font-weight: 600;
-  font-size: 12px;
   line-height: 117%;
-  text-transform: uppercase;
   color: #fff;
 `;
 

@@ -1,6 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import "../../../public/fonts/Right Grotesk/stylesheet.css";
-import "../../../public/fonts/MessinaSans/stylesheet.css";
+
 import AboutMobileImg from "../../img/about-mobile.png";
 import AboutTabletImg from "../../img/about-tablet.png";
 import AboutDesktopImg from "../../img/about-desktop.png";
@@ -39,13 +38,10 @@ export const AboutMainWrapper = styled.div`
 export const AboutTitle = styled.h2`
   margin-bottom: 16px;
 
-  font-family: "RightGrotesk", sans-serif;
-  font-weight: 900;
   font-size: 40px;
   line-height: 100%;
-  text-transform: uppercase;
+
   text-align: left;
-  color: #fff;
 
   @media screen and (min-width: 768px) {
     width: 269px;
@@ -77,9 +73,7 @@ export const AboutSubtitle = styled.p`
   font-weight: 400;
   font-size: 16px;
   line-height: 119%;
-  text-transform: uppercase;
   text-align: right;
-  color: #fff;
 
   .about-subtitle-tablet {
     display: none;
@@ -139,11 +133,7 @@ export const AboutText = styled.p`
 
   font-family: "Messina Sans Mono", sans-serif;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 117%;
-  text-transform: uppercase;
   text-align: center;
-  color: #fff;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
@@ -209,12 +199,8 @@ export const AboutSvgLine = styled.svg`
 `;
 
 export const AboutLinespan = styled.span`
-  font-family: "RightGrotesk", sans-serif;
-  font-weight: 900;
   font-size: 36px;
   line-height: 100%;
-  text-transform: uppercase;
-  color: #fff;
 
   @media screen and (min-width: 1280px) {
     font-size: 64px;

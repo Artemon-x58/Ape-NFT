@@ -16,13 +16,14 @@ import {
 } from "./MobileMenu.styled";
 import { handleMenuItemClick, sections } from "../../js/scrollToSection";
 import Icons from "../../img/svg/icons.svg";
+import { socialLinks } from "../Header/headerData";
 
 export const MobileMenu = ({ handleMenuClick, isActive }) => {
   return (
     <MobileMenuWrapper $isActive={isActive}>
       <MobileMenuContainer>
         <NavWrapper>
-          <MobileMenuLogo href="../../../index.html">
+          <MobileMenuLogo href="/index.html">
             <MobileMenuSvg>
               <use href={`${Icons}#icon-logo`} />
             </MobileMenuSvg>
@@ -46,11 +47,7 @@ export const MobileMenu = ({ handleMenuClick, isActive }) => {
                 Close
               </MobileMenuBtn>
             </MobileMenuItemBtns>
-            {[
-              { href: "https://discord.com/", icon: "discord" },
-              { href: "https://logomark.com/", icon: "logomark" },
-              { href: "https://twitter.com/", icon: "X" },
-            ].map(({ href, icon }, index) => (
+            {socialLinks.map(({ href, icon }, index) => (
               <MobileMenuItemBtns key={index}>
                 <MobileMenuBtn href={href} target="_blank">
                   <MobileMenuBtnSvg>

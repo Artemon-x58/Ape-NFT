@@ -48,7 +48,7 @@ export const MindMapSlider = () => {
         <SwiperSlide>
           <MindMapItem style={{ backgroundColor: "#dc3b5a" }}>
             <MindMapLink
-              href="https://www.linkedin.com/pulse/how-start-nft-collection-walkthrough-guide-brands-creators/"
+              href="https://www.linkedin.com/in/artem-melnyk-x58/"
               target="_blank"
             >
               <MindMapSvg>

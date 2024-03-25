@@ -3,7 +3,7 @@ import { Header } from "./Header/Header";
 import { Main } from "./Main/Main";
 import { MobileMenu } from "./MobileMenu/MobileMenu";
 import { Footer } from "./Footer/Footer";
-import { GlobalStyles } from "./GlobalStyles/GlobalStyles";
+import { GlobalStyles } from "./GlobalStyles/GlobalStyles.styled";
 import { useMediaQuery } from "../js/mediaQuery";
 
 const App = () => {

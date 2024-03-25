@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { Container } from "../Container/Container.styled";
-import "../../../public/fonts/BiroScript/stylesheet.css";
-import "../../../public/fonts/MessinaSans/stylesheet.css";
-import "../../../public/fonts/Right Grotesk/stylesheet.css";
+
 import HeroMobile from "../../img/mobile-hero.png";
 import HeroTablet from "../../img/tablet-hero.png";
 import HeroDesktop from "../../img/desktop-hero.png";
@@ -47,7 +45,7 @@ export const HeroWrapper = styled.div`
 export const HeroTitle = styled.h1`
   display: block;
   position: relative;
-  font-family: "RightGrotesk", sans-serif;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 100%;
@@ -97,6 +95,7 @@ export const HeroSubtitleTop = styled.p`
   font-weight: 400;
   font-size: 16px;
   line-height: 169%;
+  text-transform: none;
   color: #1e1e1e;
   text-align: center;
 
@@ -167,8 +166,6 @@ export const HeroLink = styled.a`
   backdrop-filter: blur(12px);
   background: rgba(30, 30, 30, 0.1);
 
-  font-family: "RightGrotesk", sans-serif;
-  font-weight: 900;
   font-size: 16px;
   line-height: 119%;
   color: #1e1e1e;
@@ -196,9 +193,6 @@ export const HeroLink = styled.a`
 export const HeroText = styled.p`
   font-family: "Messina Sans Mono", sans-serif;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 117%;
-  text-transform: uppercase;
   text-align: center;
   color: #1e1e1e;
 

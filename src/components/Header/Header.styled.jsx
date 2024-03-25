@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import "../../../public/fonts/Right Grotesk/stylesheet.css";
 
 export const HeaderStyled = styled.header`
   display: flex;
@@ -61,9 +60,8 @@ export const SocialSvg = styled.svg`
 export const Menu = styled.button`
   border: none;
   background: transparent;
-  font-family: "RightGrotesk", sans-serif;
+
   font-weight: 600;
-  font-size: 12px;
   line-height: 117%;
   color: ${({ $isScrolled }) => ($isScrolled ? "#ffffff" : "#1e1e1e")};
   transition: color 250ms linear;
@@ -148,11 +146,8 @@ export const HeaderNavItem = styled.li`
 export const HeaderNavItemLink = styled.a`
   transition: color 250ms linear;
 
-  font-family: "RightGrotesk", sans-serif;
   font-weight: 600;
-  font-size: 12px;
   line-height: 119%;
-  text-transform: uppercase;
   color: #1e1e1e;
   color: ${(props) => (props.$isScrolled ? "#fff" : "#1e1e1e")};
 

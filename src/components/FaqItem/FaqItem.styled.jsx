@@ -1,7 +1,4 @@
 import styled from "styled-components";
-import "../../../public/fonts/BiroScript/stylesheet.css";
-import "../../../public/fonts/MessinaSans/stylesheet.css";
-import "../../../public/fonts/Right Grotesk/stylesheet.css";
 
 export const FaqListItemStyled = styled.li`
   position: relative;
@@ -24,11 +21,8 @@ export const FaqListItemTitle = styled.h3`
   transition: color 250ms linear;
   position: relative;
 
-  font-family: "RightGrotesk", sans-serif;
-  font-weight: 900;
   font-size: 20px;
   line-height: 100%;
-  text-transform: uppercase;
   color: ${(props) => (props.$isOpen ? "#dc3b5a" : "#fff")};
 
   &:hover {
@@ -82,10 +76,6 @@ export const FaqListItemText = styled.p`
 
   font-family: "Messina Sans Mono", sans-serif;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 117%;
-  text-transform: uppercase;
-  color: #fff;
 
   @media screen and (min-width: 768px) {
     margin-top: 12px;

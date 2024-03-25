@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import "../../../public/fonts/BiroScript/stylesheet.css";
 
 export const SwiperBtnsWrapper = styled.div`
   display: flex;

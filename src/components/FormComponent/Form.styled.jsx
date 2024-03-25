@@ -1,6 +1,5 @@
 import { Field, Form } from "formik";
 import styled from "styled-components";
-import "../../../public/fonts/MessinaSans/stylesheet.css";
 
 export const FormStyled = styled(Form)`
   display: flex;
@@ -44,7 +43,6 @@ export const FieldStyled = styled(Field)`
 
   font-family: "Messina Sans Mono", sans-serif;
   font-weight: 400;
-  font-size: 12px;
   line-height: 117%;
   color: #fff;
 
@@ -72,20 +70,15 @@ export const FormBtn = styled.button`
   backdrop-filter: blur(12px);
   background: #dc3b5a;
   border: none;
-
   transition: color 250ms linear;
+
+  font-size: 16px;
+  line-height: 119%;
+  color: #fff;
 
   &:hover {
     color: #1e1e1e;
   }
-
-  font-family: "RightGrotesk", sans-serif;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 119%;
-  text-transform: uppercase;
-  color: #fff;
-
   @media screen and (min-width: 768px) {
     max-width: 248px;
     margin-left: auto;
@@ -109,14 +102,12 @@ export const CustomErrorMessage = styled.p`
   font-weight: 400;
   font-size: 10px;
   line-height: 120%;
-  text-transform: uppercase;
   text-align: right;
   color: #dc3b5a;
 
   @media screen and (min-width: 1280px) {
     bottom: -18px;
 
-    font-size: 12px;
     line-height: 117%;
   }
 `;
