@@ -213,7 +213,7 @@ Error generating stack: `+s.message+`
     padding-right: 136px;
   }
 `,ix="/Ape-NFT/assets/about-mobile-DeFgLA6K.png",sx="/Ape-NFT/assets/about-tablet-DFj4Dc3B.png",ox="/Ape-NFT/assets/about-desktop-DIOe8LaE.png",lx=Bw`
-  0% { transform: translateX(100%); }
+  0% { transform: translateX(150%); }
   100% { transform: translateX(-100%); }
 `,ax=A.div`
   @media screen and (min-width: 768px) {
@@ -354,8 +354,6 @@ Error generating stack: `+s.message+`
 `,gx=A.div`
   height: 52px;
   white-space: nowrap;
-  display: flex;
-  align-items: center;
 
   background-color: #dc3b5a;
 
