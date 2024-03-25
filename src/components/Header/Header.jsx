@@ -41,7 +41,7 @@ export const Header = ({ isActive, isOpenListNav, handleOpenNavList }) => {
   return (
     <Container style={{ position: "relative", width: "100%" }}>
       <HeaderStyled>
-        <Logo href="/index.html" $isScrolled={isScrolled}>
+        <Logo onClick={() => location.reload()} $isScrolled={isScrolled}>
           <LogoSvg $isActive={isActive}>
             <use href={`${Icons}#icon-logo`} />
           </LogoSvg>

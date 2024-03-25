@@ -23,7 +23,7 @@ export const MobileMenu = ({ handleMenuClick, isActive }) => {
     <MobileMenuWrapper $isActive={isActive}>
       <MobileMenuContainer>
         <NavWrapper>
-          <MobileMenuLogo href="/index.html">
+          <MobileMenuLogo onClick={() => location.reload()}>
             <MobileMenuSvg>
               <use href={`${Icons}#icon-logo`} />
             </MobileMenuSvg>
