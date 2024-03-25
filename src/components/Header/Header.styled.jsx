@@ -2,23 +2,33 @@ import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 60vw;
   padding-top: 54px;
   position: fixed;
   top: 16px;
-  left: 16px;
-  right: 16px;
+  left: 0;
+  right: 0;
+
+  @media screen and (min-width: 480px) {
+    gap: 352px;
+  }
 
   @media screen and (min-width: 768px) {
     top: 20px;
-    left: 28px;
-    right: 28px;
+    gap: 616px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    gap: 80vw;
   }
 `;
 
 export const HeaderWrapper = styled.div``;
 
 export const Logo = styled.a`
+  margin-bottom: auto;
   visibility: ${(props) => (props.$isScrolled ? "hidden" : "viseble")};
 `;
 
@@ -60,6 +70,15 @@ export const SocialSvg = styled.svg`
 export const Menu = styled.button`
   border: none;
   background: transparent;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  backdrop-filter: blur(12px);
+  background: ${({ $isScrolled }) =>
+    $isScrolled ? "rgba(255, 255, 255, 0.1);" : "rgba(30, 30, 30, 0.1);"};
+
+  border-radius: ${({ $deviceType, $isOpenListNav }) =>
+    $deviceType === "mobile" || !$isOpenListNav ? "8px" : "0 8px 8px 0"};
 
   font-weight: 600;
   line-height: 117%;
@@ -73,6 +92,9 @@ export const Menu = styled.button`
   }
 
   @media screen and (min-width: 1280px) {
+    width: 80px;
+    height: 80px;
+
     font-size: 16px;
     line-height: 119%;
   }
@@ -83,9 +105,15 @@ export const SocialList = styled.ul`
   flex-direction: column;
   align-items: end;
   gap: 8px;
+  max-width: 352px;
+
+  @media screen and (min-width: 768px) {
+  }
 `;
 
-export const SocialListItem = styled.li`
+export const SocialListItem = styled.li``;
+
+export const SocialListLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,7 +121,8 @@ export const SocialListItem = styled.li`
   width: 48px;
   height: 48px;
   backdrop-filter: blur(12px);
-  background: rgba(30, 30, 30, 0.1);
+  background: ${({ $isScrolled }) =>
+    $isScrolled ? "rgba(255, 255, 255, 0.1);" : "rgba(30, 30, 30, 0.1);"};
 
   @media screen and (min-width: 1280px) {
     width: 80px;
@@ -101,65 +130,61 @@ export const SocialListItem = styled.li`
   }
 `;
 
-export const SocialListLink = styled.a``;
-
 export const HeaderNavWrapper = styled.div`
   display: flex;
   align-items: center;
-
-  & > li {
-    border-radius: ${({ $deviceType, $isOpenListNav }) =>
-      $deviceType === "mobile" || !$isOpenListNav ? "8px" : "0 8px 8px 0"};
-  }
+  position: relative;
 `;
 
 export const HeaderNavList = styled.ul`
-  display: flex;
+  display: ${({ $isOpenListNav }) => ($isOpenListNav ? "flex" : "none")};
   transition: transform 250ms linear;
+  position: absolute;
+  right: 47px;
   transform: translateX(
     ${({ $isOpenListNav }) => ($isOpenListNav ? "0%" : "150%")}
   );
   visibility: ${({ $deviceType }) =>
     $deviceType === "mobile" ? "hidden" : "visible"};
-  & li:first-child {
-    border-radius: 12px 0 0 12px;
+
+  @media screen and (min-width: 1280px) {
+    right: 80px;
   }
 `;
 
-export const HeaderNavItem = styled.li`
+export const HeaderNavItem = styled.li``;
+
+export const HeaderNavItemLink = styled.a`
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  transition: color 250ms linear;
 
   backdrop-filter: blur(12px);
-  background: ${(props) =>
-    props.$isScrolled ? "rgba(255, 255, 255, 0.1);" : "rgba(30, 30, 30, 0.1);"};
-
-  @media screen and (min-width: 1280px) {
-    width: 80px;
-    height: 80px;
-  }
-`;
-
-export const HeaderNavItemLink = styled.a`
-  transition: color 250ms linear;
+  background: ${({ $isScrolled }) =>
+    $isScrolled ? "rgba(255, 255, 255, 0.1);" : "rgba(30, 30, 30, 0.1);"};
+  border-radius: ${({ $isFirst }) => ($isFirst ? "12px 0 0 12px" : "0")};
 
   font-weight: 600;
   line-height: 119%;
-  color: #1e1e1e;
-  color: ${(props) => (props.$isScrolled ? "#fff" : "#1e1e1e")};
+  color: ${({ $isScrolled }) => ($isScrolled ? "#fff" : "#1e1e1e")};
 
   &:hover,
   &:focus {
     color: #fff;
-    color: ${(props) => (props.$isScrolled ? "#dc3b5a;" : "#fff")};
+    color: ${($isScrolled) => ($isScrolled ? "#dc3b5a;" : "#fff")};
     text-decoration: underline;
+  }
+
+  @media screen and (min-width: 768px) {
   }
 
   @media screen and (min-width: 1280px) {
     font-size: 16px;
     line-height: 119%;
+    width: 80px;
+    height: 80px;
   }
 `;
