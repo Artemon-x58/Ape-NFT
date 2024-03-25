@@ -5,7 +5,7 @@ import AboutTabletImg from "../../img/about-tablet.png";
 import AboutDesktopImg from "../../img/about-desktop.png";
 
 const marqueeAnimation = keyframes`
-  0% { transform: translateX(100%); }
+  0% { transform: translateX(150%); }
   100% { transform: translateX(-100%); }
 `;
 
@@ -164,8 +164,6 @@ export const AboutImg = styled.div`
 export const AboutWrapperLine = styled.div`
   height: 52px;
   white-space: nowrap;
-  display: flex;
-  align-items: center;
 
   background-color: #dc3b5a;
 
