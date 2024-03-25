@@ -26,7 +26,8 @@ export const Logo = styled.a`
 export const LogoSvg = styled.svg`
   width: 48px;
   height: 32px;
-  fill: ${(props) => (props.$isActive ? "#fff" : "#1e1e1e")};
+
+  fill: #1e1e1e;
 
   transition: fill 250ms linear;
 
@@ -44,14 +45,11 @@ export const SocialSvg = styled.svg`
   width: 16px;
   height: 16px;
   padding: 10px;
-  fill: ${({ $isActive, $isScrolled }) =>
-    $isActive || $isScrolled ? "#ffffff" : "#1e1e1e"};
+  fill: ${({ $isScrolled }) => ($isScrolled ? "#ffffff" : "#1e1e1e")};
   transition: fill 250ms linear;
 
   &:hover {
-    fill: #fff;
-    fill: ${({ $isActive, $isScrolled }) =>
-      $isActive || $isScrolled ? "#DC3B5A" : "#fff"};
+    fill: ${({ $isScrolled }) => ($isScrolled ? "#DC3B5A" : "#fff")};
   }
 
   @media screen and (min-width: 1280px) {
@@ -67,14 +65,12 @@ export const Menu = styled.button`
   font-weight: 600;
   font-size: 12px;
   line-height: 117%;
-  color: ${({ $isActive, $isScrolled }) =>
-    $isActive || $isScrolled ? "#ffffff" : "#1e1e1e"};
+  color: ${({ $isScrolled }) => ($isScrolled ? "#ffffff" : "#1e1e1e")};
   transition: color 250ms linear;
 
   &:hover,
   &:focus {
-    color: ${({ $isActive, $isScrolled }) =>
-      $isActive || $isScrolled ? "#DC3B5A" : "#fff"};
+    color: ${({ $isScrolled }) => ($isScrolled ? "#DC3B5A" : "#fff")};
     text-decoration: underline;
   }
 
@@ -99,8 +95,7 @@ export const SocialListItem = styled.li`
   width: 48px;
   height: 48px;
   backdrop-filter: blur(12px);
-  background: ${(props) =>
-    props.$isActive ? "rgba(255, 255, 255, 0.1)" : "rgba(30, 30, 30, 0.1)"};
+  background: rgba(30, 30, 30, 0.1);
 
   @media screen and (min-width: 1280px) {
     width: 80px;
@@ -115,15 +110,19 @@ export const HeaderNavWrapper = styled.div`
   align-items: center;
 
   & > li {
-    border-radius: ${(props) =>
-      props.$deviceType === "mobile" ? "8px" : "0 8px 8px 0"};
+    border-radius: ${({ $deviceType, $isOpenListNav }) =>
+      $deviceType === "mobile" || !$isOpenListNav ? "8px" : "0 8px 8px 0"};
   }
 `;
 
 export const HeaderNavList = styled.ul`
   display: flex;
-  visibility: ${({ $deviceType, $isOpenListNav }) =>
-    $deviceType === "mobile" || $isOpenListNav ? "hidden" : "visible"};
+  transition: transform 250ms linear;
+  transform: translateX(
+    ${({ $isOpenListNav }) => ($isOpenListNav ? "0%" : "150%")}
+  );
+  visibility: ${({ $deviceType }) =>
+    $deviceType === "mobile" ? "hidden" : "visible"};
   & li:first-child {
     border-radius: 12px 0 0 12px;
   }

@@ -19,14 +19,9 @@ import PropTypes from "prop-types";
 import { handleMintSection } from "../../js/scrollToSection";
 import { useMediaQuery } from "../../js/mediaQuery.js";
 
-export const Header = ({ isActive }) => {
+export const Header = ({ isActive, isOpenListNav, handleOpenNavList }) => {
   const [deviceType, setDeviceType] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isOpenListNav, setIsOpenListNav] = useState(false);
-
-  const handleMenuClick = () => {
-    setIsOpenListNav(!isOpenListNav);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +50,10 @@ export const Header = ({ isActive }) => {
           </LogoSvg>
         </Logo>
         <SocialList>
-          <HeaderNavWrapper $deviceType={deviceType}>
+          <HeaderNavWrapper
+            $deviceType={deviceType}
+            $isOpenListNav={isOpenListNav}
+          >
             <HeaderNavList
               $deviceType={deviceType}
               $isOpenListNav={isOpenListNav}
@@ -102,8 +100,8 @@ export const Header = ({ isActive }) => {
               </HeaderNavItem>
             </HeaderNavList>
             <SocialListItem $isActive={isActive}>
-              <Menu onClick={handleMenuClick} $isScrolled={isScrolled}>
-                {isOpenListNav ? "CLOSE" : "MENU"}
+              <Menu onClick={handleOpenNavList} $isScrolled={isScrolled}>
+                {isActive || isOpenListNav ? "CLOSE" : "MENU"}
               </Menu>
             </SocialListItem>
           </HeaderNavWrapper>
@@ -128,5 +126,7 @@ export const Header = ({ isActive }) => {
 };
 
 Header.propTypes = {
-  isActive: PropTypes.bool,
+  handleOpenNavList: PropTypes.func.isRequired,
+  isActive: PropTypes.bool.isRequired,
+  isOpenListNav: PropTypes.bool.isRequired,
 };
